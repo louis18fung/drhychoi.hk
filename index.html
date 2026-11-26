@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="robots" content="noindex,nofollow" />
+    <meta name="robots" content="index,follow" />
     <meta
       name="description"
-      content="Dr Choi Hoi Ying Bernice 診所網站設計預覽：留一點空間，慢慢說。"
+      content="Dr Choi Hoi Ying Bernice 精神科診所，位於香港中環萬邦行。提供兒童及青少年、成人及長者精神科服務與心理輔導，可透過 WhatsApp 預約查詢。"
     />
     <title>Dr Choi Hoi Ying Bernice｜a little space.</title>
     <style>
@@ -2328,15 +2328,13 @@
         letter-spacing: 0.12em;
       }
       .doctor-name {
+        text-wrap: balance;
         font:
-          38px/1.25 Georgia,
+          40px/1.25 Georgia,
           "Songti TC",
           serif;
         margin: 0;
         letter-spacing: -0.025em;
-      }
-      .doctor-name > span {
-        font-size: 52px;
       }
       .profile-context {
         margin: 14px 0 31px;
@@ -2634,9 +2632,6 @@
         .doctor-name {
           font-size: 30px;
         }
-        .doctor-name > span {
-          font-size: 43px;
-        }
         .doctor-composition figcaption {
           font-size: 22px;
         }
@@ -2816,9 +2811,6 @@
         }
         .doctor-name {
           font-size: 33px;
-        }
-        .doctor-name > span {
-          font-size: 45px;
         }
         .profile-context {
           font-size: 12px;
@@ -4283,6 +4275,102 @@
         }
       }
 
+      .wa-float {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        z-index: 40;
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        min-height: 48px;
+        padding: 0 20px 0 16px;
+        border-radius: 30px;
+        background: #176b45;
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+        box-shadow: 0 8px 22px #0b1f2e55;
+        border: 1px solid #ffffff55;
+      }
+      .wa-float svg {
+        width: 24px;
+        height: 24px;
+        flex: none;
+        fill: currentColor;
+      }
+      .wa-float:hover {
+        background: #125738;
+      }
+      .wa-float:focus-visible {
+        outline: 3px solid #f2d27a;
+        outline-offset: 3px;
+      }
+      @media (max-width: 820px) {
+        .wa-float {
+          right: 12px;
+          bottom: calc(84px + env(safe-area-inset-bottom));
+          padding: 0 16px 0 13px;
+        }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .wa-float {
+          transition:
+            background 0.2s,
+            transform 0.2s;
+        }
+        .wa-float:hover {
+          transform: translateY(-2px);
+        }
+      }
+
+      .map-block {
+        margin-top: 34px;
+      }
+      .map-head {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 14px;
+      }
+      .map-head h3 {
+        font:
+          24px/1.4 Georgia,
+          "Songti TC",
+          serif;
+        font-weight: 400;
+        margin: 0;
+        color: #1c3e58;
+      }
+      .map-head a {
+        color: #1c3e58;
+        font-size: 14px;
+        text-underline-offset: 4px;
+      }
+      .map-block iframe {
+        display: block;
+        width: 100%;
+        height: 380px;
+        border: 1px solid #b5b79f;
+        border-radius: 6px;
+        background: #e7ecee;
+      }
+      .map-note {
+        margin: 12px 0 0;
+        font-size: 14px;
+        color: #435f6e;
+      }
+      @media (max-width: 680px) {
+        .map-block iframe {
+          height: 300px;
+        }
+        .map-head h3 {
+          font-size: 21px;
+        }
+      }
+
       .service-description {
         color: #364f61;
         font-size: 15px;
@@ -4365,7 +4453,8 @@
         margin-top: 55px;
       }
       .doctor-bio,
-      .doctor-philosophy {
+      .doctor-philosophy,
+      .doctor-media {
         display: grid;
         grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.8fr);
         gap: 65px;
@@ -4397,7 +4486,8 @@
       .philosophy-list p:last-child {
         margin-bottom: 0;
       }
-      .doctor-philosophy {
+      .doctor-philosophy,
+      .doctor-media {
         margin-top: 44px;
       }
       .philosophy-list {
@@ -4440,7 +4530,8 @@
       }
       @media (max-width: 900px) {
         .doctor-bio,
-        .doctor-philosophy {
+        .doctor-philosophy,
+        .doctor-media {
           gap: 30px;
           grid-template-columns: minmax(0, 0.65fr) minmax(0, 1.8fr);
         }
@@ -4453,7 +4544,8 @@
           margin-top: 35px;
         }
         .doctor-bio,
-        .doctor-philosophy {
+        .doctor-philosophy,
+        .doctor-media {
           display: block;
           padding-top: 28px;
         }
@@ -4468,7 +4560,8 @@
           font-size: 14px;
           line-height: 2;
         }
-        .doctor-philosophy {
+        .doctor-philosophy,
+        .doctor-media {
           margin-top: 32px;
         }
         .philosophy-list > li {
@@ -4520,10 +4613,9 @@
     ><a class="skip" href="#main">跳至內容 / Skip to content</a>
     <div class="progress" aria-hidden="true"></div>
     <div class="preview">
-      <span class="zh">網站預覽 · WhatsApp 查詢可用，預約須由診所確認</span
+      <span class="zh">WhatsApp 查詢可用，預約須由診所確認</span
       ><span class="en"
-        >DESIGN PREVIEW · WhatsApp enquiries available; clinic confirmation
-        required</span
+        >WhatsApp enquiries available; clinic confirmation required</span
       >
     </div>
     <header>
@@ -4533,8 +4625,10 @@
           <div>
             <div class="brand-name">Dr Choi Hoi Ying Bernice</div>
             <small
-              ><span class="zh">精神科診所網站 · 設計示範</span
-              ><span class="en">PSYCHIATRY CLINIC · DESIGN PREVIEW</span></small
+              ><span class="zh">精神科診所 · 香港中環</span
+              ><span class="en"
+                >PSYCHIATRY CLINIC · CENTRAL, HONG KONG</span
+              ></small
             >
           </div></a
         >
@@ -4686,28 +4780,20 @@
                 <small
                   ><span class="zh">中環萬邦行</span
                   ><span class="en">Melbourne Plaza · Central</span></small
-                ><span class="zh">7樓 · 709室</span
-                ><span class="en">Room 709 · 7/F</span>
-              </div>
-              <div class="art-label">
-                <span class="zh">抽象動態視覺 · 非診所照片</span
-                ><span class="en"
-                  >Abstract visual · Not a clinic photograph</span
-                >
+                ><span class="zh">9樓 · 904室</span
+                ><span class="en">Room 904 · 9/F</span>
               </div>
             </div>
           </section>
           <div class="hero-note">
             <span
-              ><span class="zh">中環萬邦行7樓709室</span
+              ><span class="zh">中環萬邦行9樓904室</span
               ><span class="en"
-                >Room 709, 7/F, Melbourne Plaza, Central</span
+                >Room 904, 9/F, Melbourne Plaza, Central</span
               ></span
             ><span
-              ><span class="zh">上午10時至晚上7時 · 應診日子待確認</span
-              ><span class="en"
-                >10:00 am–7:00 pm · Consultation days to be confirmed</span
-              ></span
+              ><span class="zh">上午10時至晚上7時</span
+              ><span class="en">10:00 am–7:00 pm</span></span
             >
           </div>
         </div>
@@ -34584,9 +34670,7 @@
             <p class="profile-label">
               <span class="zh">醫生介紹</span><span class="en">THE DOCTOR</span>
             </p>
-            <h3 class="doctor-name">
-              Dr Choi Hoi Ying<br /><span>Bernice</span>
-            </h3>
+            <h3 class="doctor-name">Dr Choi Hoi Ying Bernice</h3>
             <p class="profile-context">
               <span class="zh">精神科診所 · 香港中環</span
               ><span class="en">Psychiatry clinic · Central, Hong Kong</span>
@@ -34638,13 +34722,6 @@
                 </div>
               </li>
             </ul>
-            <p class="qualification-note">
-              <span class="zh">資歷按提供資料列出，正式刊載前由醫生確認。</span
-              ><span class="en"
-                >Qualifications as supplied, subject to the doctor’s
-                confirmation before publication.</span
-              >
-            </p>
             <div class="profile-links">
               <a href="#visit"
                 ><span class="zh">了解初診安排</span
@@ -34658,15 +34735,6 @@
             </div>
           </div>
         </div>
-        <div class="doctor-footnote">
-          <span class="zh"
-            >真實醫生照片待提供；目前以概念藝術呈現，不以生成肖像代替。</span
-          >
-          <span class="en"
-            >A real doctor photograph is pending. Conceptual art is used here,
-            never a generated likeness.</span
-          >
-        </div>
         <div class="doctor-details">
           <section class="doctor-bio" aria-labelledby="bio-heading">
             <div class="doctor-detail-heading">
@@ -34678,14 +34746,14 @@
             <div class="doctor-detail-copy">
               <p>
                 <span class="zh"
-                  >蔡醫生從事精神科臨床工作，曾於腫瘤科工作。在醫院管理局任職期間，曾於成人、兒童及青少年、長者精神科，以及酒精及藥物濫用相關部門提供治療，接觸不同年齡及背景人士的精神健康需要。</span
+                  >蔡醫生從事精神科臨床工作，在醫院管理局任職期間，曾於成人、兒童及青少年、長者精神科，以及酒精及藥物濫用相關部門提供治療，接觸不同年齡及背景人士的精神健康需要。</span
                 ><span class="en"
-                  >Dr Choi practises clinical psychiatry and previously worked
-                  in oncology. While working at the Hospital Authority, Dr Choi
-                  provided treatment in adult, child and adolescent, and older
-                  adult psychiatry, as well as services related to alcohol and
-                  substance misuse, gaining experience of the mental health
-                  needs of people across different ages and backgrounds.</span
+                  >Dr Choi practises clinical psychiatry. While working at the
+                  Hospital Authority, Dr Choi provided treatment in adult, child
+                  and adolescent, and older adult psychiatry, as well as
+                  services related to alcohol and substance misuse, gaining
+                  experience of the mental health needs of people across
+                  different ages and backgrounds.</span
                 >
               </p>
               <p>
@@ -34705,15 +34773,12 @@
               </p>
               <p>
                 <span class="zh"
-                  >除了精神健康問題的評估與治療，蔡醫生亦提供個別輔導，協助求診者面對成長適應、家庭與人際關係，以及其他人生轉變。過往在腫瘤科工作的經驗，亦讓蔡醫生特別關注癌症患者及其家屬的心理需要。</span
+                  >除了精神健康問題的評估與治療，蔡醫生亦提供個別輔導，協助求診者面對成長適應、家庭與人際關係，以及其他人生轉變。</span
                 ><span class="en"
                   >Alongside the assessment and treatment of mental health
                   concerns, Dr Choi offers individual counselling to help people
                   navigate personal growth and adjustment, family and
-                  interpersonal relationships, and other life transitions.
-                  Previous experience in oncology has also fostered a particular
-                  concern for the psychological needs of people with cancer and
-                  their families.</span
+                  interpersonal relationships, and other life transitions.</span
                 >
               </p>
             </div>
@@ -34753,6 +34818,34 @@
                     nurture relationships. Mental health care can be not only
                     treatment after illness, but also a process of personal
                     growth and building inner strength.</span
+                  >
+                </p>
+              </li>
+              <li>
+                <h4>
+                  <span class="zh">無論有沒有診斷，你都值得被好好傾聽</span
+                  ><span class="en"
+                    >Whether or not there is a diagnosis, you deserve to be
+                    heard</span
+                  >
+                </h4>
+                <p>
+                  <span class="zh"
+                    >許多人遲遲未有求診，或許是不肯定自己是否「真的有病」，也可能擔心被貼上標籤，於是覺得再等等也無妨。這些顧慮都很自然。蔡醫生認為，精神科醫生的角色不只是作出診斷，也包括在你並未達到診斷標準時，坦誠地讓你知道：你沒有精神疾病。如果有診斷，蔡醫生會細心解釋其意思及你的選擇；如果沒有，蔡醫生會與你一起了解困擾的來源，並共同商討前行的方向，讓你懂得如何保護自己的身心，避免問題在不知不覺間加深。</span
+                  ><span class="en"
+                    >Many people put off seeking help because they are unsure
+                    whether they are “really ill”, or worry about being
+                    labelled, and so feel it is fine to wait a little longer.
+                    These concerns are entirely natural. Dr Choi believes that a
+                    psychiatrist’s role is not only to make diagnoses, but also,
+                    when someone does not meet diagnostic criteria, to say
+                    honestly that they do not have a mental illness. If there is
+                    a diagnosis, Dr Choi will explain carefully what it means
+                    and what options are available. If there is not, Dr Choi
+                    will work with you to understand the source of your
+                    difficulties and discuss the way forward together, so that
+                    you know how to protect your mental and physical wellbeing
+                    and prevent problems from deepening unnoticed.</span
                   >
                 </p>
               </li>
@@ -35027,6 +35120,10 @@
                   ><span class="en">Autism spectrum disorder</span>
                 </li>
                 <li>
+                  <span class="zh">抽動症</span
+                  ><span class="en">Tic disorders</span>
+                </li>
+                <li>
                   <span class="zh">情緒困擾、抑鬱及焦慮</span
                   ><span class="en"
                     >Emotional distress, depression and anxiety</span
@@ -35236,6 +35333,10 @@
                   families</span
                 >
               </li>
+              <li>
+                <span class="zh">撰寫醫療報告</span
+                ><span class="en">Medical report writing</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -35248,10 +35349,9 @@
             ><span class="en">From an enquiry<br />to your first visit.</span>
           </h2>
           <p class="tiny">
-            <span class="zh">以下為流程示範，實際安排由診所確認。</span
+            <span class="zh">實際安排由診所確認。</span
             ><span class="en"
-              >Illustrative process. Actual arrangements require clinic
-              confirmation.</span
+              >Actual arrangements are confirmed by the clinic.</span
             >
           </p>
         </div>
@@ -35264,11 +35364,11 @@
             </h3>
             <p>
               <span class="zh"
-                >可使用下方預約查詢表單，或透過 WhatsApp 6334 6343
+                >可使用下方預約查詢表單，或透過 WhatsApp +852 6128 8568
                 查詢接診及安排。</span
               ><span class="en"
-                >Use the appointment enquiry form below or WhatsApp +852 6334
-                6343 to ask about eligibility and arrangements.</span
+                >Use the appointment enquiry form below or WhatsApp +852 6128
+                8568 to ask about eligibility and arrangements.</span
               >
             </p>
           </article>
@@ -35317,12 +35417,8 @@
               ><span class="en">Where is the clinic?</span>
             </summary>
             <p>
-              <span class="zh"
-                >中環萬邦行7樓709室。交通路線及無障礙設施資料待確認。</span
-              ><span class="en"
-                >Room 709, 7/F, Melbourne Plaza, Central. Directions and
-                accessibility information are pending confirmation.</span
-              >
+              <span class="zh">中環萬邦行9樓904室。</span
+              ><span class="en">Room 904, 9/F, Melbourne Plaza, Central.</span>
             </p>
           </details>
           <details>
@@ -35332,25 +35428,10 @@
             </summary>
             <p>
               <span class="zh"
-                >上午10時至晚上7時。應診日子、午膳休息及公眾假期安排尚待確認。</span
+                >上午10時至晚上7時。星期日或公眾假期，需要特別預約。</span
               ><span class="en"
-                >10:00 am–7:00 pm. Consultation days, lunch breaks and public
-                holiday arrangements are to be confirmed.</span
-              >
-            </p>
-          </details>
-          <details>
-            <summary>
-              <span class="zh">兒童接診及評估如何安排？</span
-              ><span class="en">What are the arrangements for children?</span>
-            </summary>
-            <p>
-              <span class="zh"
-                >兒童接診年齡、評估流程及陪診安排，請向診所確認。本示範不預設特定年齡或評估套餐。</span
-              ><span class="en"
-                >Please confirm age eligibility, assessment processes and
-                accompanying-person arrangements with the clinic. No specific
-                age range or assessment package is assumed.</span
+                >10:00 am–7:00 pm. Sundays and public holidays require a special
+                appointment.</span
               >
             </p>
           </details>
@@ -35363,12 +35444,12 @@
             </summary>
             <p>
               <span class="zh"
-                >可透過 WhatsApp 6334 6343
-                查詢收費及預約。須經診所回覆確認才算完成預約；此網站不接受付款，收費及更改預約政策待確認。</span
+                >可透過 WhatsApp +852 6128 8568
+                查詢收費及預約。須經診所回覆確認才算完成預約；此網站不接受付款。</span
               ><span class="en"
-                >Enquire about fees and appointments on WhatsApp +852 6334 6343.
+                >Enquire about fees and appointments on WhatsApp +852 6128 8568.
                 Appointments require clinic confirmation. This website accepts
-                no payments; fees and change policies are to be confirmed.</span
+                no payments.</span
               >
             </p>
           </details>
@@ -35460,7 +35541,7 @@
             </ol>
             <a
               class="booking-direct"
-              href="https://wa.me/85263346343"
+              href="https://wa.me/85261288568"
               target="_blank"
               rel="noopener noreferrer"
               ><svg
@@ -35478,7 +35559,7 @@
               ><span
                 ><span class="zh">直接用 WhatsApp 查詢</span
                 ><span class="en">Enquire directly on WhatsApp</span
-                ><small>+852 6334 6343</small></span
+                ><small>+852 6128 8568</small></span
               ><span aria-hidden="true">↗</span></a
             >
             <p class="booking-help">
@@ -35712,7 +35793,7 @@
                     /></svg
                   ><span class="zh">收件人：診所 WhatsApp</span
                   ><span class="en">To: clinic WhatsApp</span
-                  ><strong>+852 6334 6343</strong>
+                  ><strong>+852 6128 8568</strong>
                 </div>
                 <pre id="booking-message" class="booking-message"></pre>
                 <label class="booking-consent"
@@ -35793,9 +35874,9 @@
             </h2>
             <p>Dr Choi Hoi Ying Bernice</p>
             <p>
-              <span class="zh">中環萬邦行7樓709室<br />上午10時至晚上7時</span
+              <span class="zh">中環萬邦行9樓904室<br />上午10時至晚上7時</span
               ><span class="en"
-                >Room 709, 7/F, Melbourne Plaza, Central<br />10:00 am–7:00
+                >Room 904, 9/F, Melbourne Plaza, Central<br />10:00 am–7:00
                 pm</span
               >
             </p>
@@ -35817,17 +35898,18 @@
                 <span class="zh">地址</span><span class="en">Address</span>
               </dt>
               <dd>
-                <span class="zh">中環萬邦行7樓709室</span
-                ><span class="en">Room 709, 7/F, Melbourne Plaza, Central</span>
+                <span class="zh">中環萬邦行9樓904室</span
+                ><span class="en">Room 904, 9/F, Melbourne Plaza, Central</span>
               </dd>
             </div>
             <div>
               <dt><span class="zh">時間</span><span class="en">Hours</span></dt>
               <dd>
                 10:00–19:00<br /><small
-                  ><span class="zh">應診日子、休息及公眾假期安排待確認</span
+                  ><span class="zh">星期日或公眾假期，需要特別預約</span
                   ><span class="en"
-                    >Days, breaks and public holidays to be confirmed</span
+                    >Sundays and public holidays require a special
+                    appointment</span
                   ></small
                 >
               </dd>
@@ -35836,16 +35918,13 @@
               <dt>
                 <span class="zh">電話</span><span class="en">Telephone</span>
               </dt>
-              <dd>
-                <span class="zh">［待提供］</span
-                ><span class="en">[To be supplied]</span>
-              </dd>
+              <dd><a href="tel:+85221163836">+852 2116 3836</a></dd>
             </div>
             <div>
               <dt>WhatsApp</dt>
               <dd>
                 <a
-                  href="https://wa.me/85263346343"
+                  href="https://wa.me/85261288568"
                   target="_blank"
                   rel="noopener noreferrer"
                   ><svg
@@ -35860,7 +35939,7 @@
                     <path
                       d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335 .157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
                     /></svg
-                  >+852 6334 6343 ↗</a
+                  >+852 6128 8568 ↗</a
                 ><br /><small
                   ><span class="zh">預約查詢須經診所確認</span
                   ><span class="en"
@@ -35872,24 +35951,55 @@
             <div>
               <dt><span class="zh">電郵</span><span class="en">Email</span></dt>
               <dd>
-                <span class="zh">［待提供］</span
-                ><span class="en">[To be supplied]</span>
+                <a
+                  href="mailto:Drbernicechoi@gmail.com"
+                  style="overflow-wrap: anywhere; max-width: 100%"
+                  >Drbernicechoi@gmail.com</a
+                >
               </dd>
             </div>
           </dl>
         </div>
+        <div class="map-block reveal" id="map">
+          <div class="map-head">
+            <h3>
+              <span class="zh">診所位置</span
+              ><span class="en">Clinic location</span>
+            </h3>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Melbourne+Plaza%2C+33+Queen%27s+Road+Central%2C+Hong+Kong"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="zh"
+                >在 Google 地圖開啟 ↗<span class="sr-only"
+                  >（在新分頁開啟）</span
+                ></span
+              ><span class="en"
+                >Open in Google Maps ↗<span class="sr-only">
+                  (opens in a new tab)</span
+                ></span
+              ></a
+            >
+          </div>
+          <iframe
+            title="Google 地圖：中環萬邦行 / Google Map: Melbourne Plaza, Central"
+            src="https://www.google.com/maps?q=Melbourne+Plaza%2C+33+Queen%27s+Road+Central%2C+Hong+Kong&amp;hl=zh-HK&amp;z=17&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+          <p class="map-note">
+            <span class="zh">中環萬邦行9樓904室</span
+            ><span class="en">Room 904, 9/F, Melbourne Plaza, Central</span>
+          </p>
+        </div>
         <div class="legal">
           <p>
             <span class="zh"
-              >本頁為設計示範。姓名、資歷、服務、中文地址及時間按提供資料整理，未作獨立核實，正式刊載前由醫生確認。哀傷項目原稱「不正常哀悼期」，展示時採用較溫和表述。網站資料僅供一般參考，不構成診斷或治療建議，不能取代個別醫療評估。</span
+              >網站資料僅供一般參考，不構成診斷或治療建議，不能取代個別醫療評估。</span
             ><span class="en"
-              >Design demonstration. The name, qualifications, services, Chinese
-              address and hours are organised from supplied material without
-              independent verification, subject to the doctor’s confirmation
-              before publication. The original grief wording was 不正常哀悼期; a
-              gentler label is used. Content is for general reference, not
-              diagnosis or treatment advice, and does not replace individual
-              assessment.</span
+              >Content is for general reference, not diagnosis or treatment
+              advice, and does not replace individual assessment.</span
             >
           </p>
           <details>
@@ -35940,10 +36050,29 @@
               serif;
           "
           >a little space.</span
-        ><span class="zh">診所設計預覽 · 星夜融合</span
-        ><span class="en">Clinic design preview · A Starry Night</span>
+        >
       </div>
     </footer>
+    <a
+      class="wa-float"
+      href="https://wa.me/85261288568"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="以 WhatsApp 聯絡診所（在新分頁開啟） / Chat with the clinic on WhatsApp (opens in a new tab)"
+      ><svg
+        class="whatsapp-icon"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <!-- WhatsApp mark: https://cdn.simpleicons.org/whatsapp -->
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335 .157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+        /></svg
+      ><span class="zh">WhatsApp 查詢</span><span class="en">WhatsApp</span></a
+    >
     <div class="mobilebar">
       <a href="#booking"
         ><span class="zh">預約查詢</span><span class="en">Enquire</span></a
@@ -36724,7 +36853,7 @@
 
       (() => {
         "use strict";
-        const DESTINATION = "85263346343";
+        const DESTINATION = "85261288568";
         const directURL = "https://wa.me/" + DESTINATION;
         const en = () => document.body.classList.contains("english");
         const form = document.querySelector("#booking-form");
